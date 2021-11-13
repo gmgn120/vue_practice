@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{greet}}</p>
+    <button @click="alertText" class="alert_btn">
+      Alert!
+    </button>
+  </div>
+  <style>
+    .alert_btn {
+    width: 30%;
+    padding: 1rem;
+    margin: 1rem auto;
+    color: #ffffff;
+    background: #40b983;
+    font-weight: bold;
+  }
+  </style>
+</body>
+</html>
+
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      greet: ""
+    },
+    methods:{
+      alertText: function(){
+        this.greet = alert("I'm Ninja!!");
+      }
+    }
+  })
+</script>
